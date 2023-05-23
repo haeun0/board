@@ -1,0 +1,18 @@
+#DB
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.0.62:3306/board_minyoung?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: green502
+    #mybatis
+mybatis:
+  type-aliases-package: com.green.board7
+  mapper-locations: mapper/**/*.xml
+
+#SWAGGER
+springdoc:
+  swagger-ui:
+    path: /swagger.html
