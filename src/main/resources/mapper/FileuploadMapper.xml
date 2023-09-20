@@ -10,5 +10,15 @@
         ,level_value=#{levelValue}
     </insert>
 
+    <select id="selFileById" resultType="FileEntity">
+        SELECT * FROM t_file
+        WHERE ifile = ${ifile}
+    </select>
 
+    <delete id="delFile">
+        DELETE
+        FROM t_file
+        WHERE ifile=#{ifile}
+
+    </delete>
 </mapper>
